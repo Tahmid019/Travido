@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:travel/screens/home.dart';
 import 'package:travel/widgets/iconB.dart';
+// import 'package:travel/screens/AniS.dart';
+import 'package:travel/screens/profile.dart';
+import 'package:travel/screens/fav.dart';
+import 'package:travel/screens/chat.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -17,9 +21,29 @@ class _MainScreenState extends State<MainScreen> {
       body: PageView(
         physics: NeverScrollableScrollPhysics(),
         controller: _pageController,
-        onPageChanged: onPageChanged,
-        children: List.generate(4, (index) => Home()),
+        onPageChanged: (index) {
+          setState(() {
+            _page = index;
+          });
+        },
+        children: List.generate(4, (index){
+          if(index == 0){
+            return Home();
+          }else if(index == 1){
+            return Favorite();
+          }else if(index == 2){
+            return Chat();
+          }else if(index == 3){
+            return Profile();
+          }else{
+            return Home();
+          }
+        }
+
+        ),
+
       ),
+
       bottomNavigationBar: BottomAppBar(
         child: Row(
           mainAxisSize: MainAxisSize.max,
@@ -58,6 +82,7 @@ class _MainScreenState extends State<MainScreen> {
     setState(() {
       this._page = page;
     });
+    
   }
 
   Widget barIcon(

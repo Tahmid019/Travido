@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:travel/util/places.dart';
 import 'package:travel/widgets/horizontalPlaceItem.dart';
 import 'package:travel/widgets/iconB.dart';
-import 'package:travel/widgets/verticalPlaceItem.dart';
+// import 'package:travel/widgets/verticalPlaceItem.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -60,19 +60,19 @@ class Home extends StatelessWidget {
     );
   }
 
-  buildVerticalList() {
-    return Padding(
-      padding: EdgeInsets.all(20.0),
-      child: ListView.builder(
-        primary: false,
-        physics: NeverScrollableScrollPhysics(),
-        shrinkWrap: true,
-        itemCount: places == null ? 0 : places.length,
-        itemBuilder: (BuildContext context, int index) {
-          Map place = places[index];
-          return VerticalPlaceItem(place: place);
-        },
-      ),
-    );
-  }
+  // buildVerticalList() {
+  //   return Padding(
+  //     padding: EdgeInsets.all(20.0),
+  //     child: ListView.builder(
+  //       primary: false,
+  //       physics: NeverScrollableScrollPhysics(),
+  //       shrinkWrap: true,
+  //       itemCount: places == null ? 0 : places.length,
+  //       itemBuilder: (BuildContext context, int index) {
+  //         Map place = places[index];
+  //         return VerticalPlaceItem(place: place);
+  //       },
+  //     ),
+  //   );
+  // }
 }

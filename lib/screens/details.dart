@@ -1,8 +1,13 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:travel/util/places.dart';
 import 'package:travel/widgets/iconB.dart';
 
 class Details extends StatelessWidget {
+  final Map place_details;
+
+  const Details({Key? key, required this.place_details}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +34,8 @@ class Details extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           SizedBox(height: 10.0),
-          buildSlider(),
+          // buildSlider(),
+          buildBox(place_details),
           SizedBox(height: 20),
           ListView(
             padding: EdgeInsets.symmetric(horizontal: 20),
@@ -43,7 +49,7 @@ class Details extends StatelessWidget {
                   Container(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "${places[0]["name"]}",
+                      "${place_details["name"]}",
                       style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 20,
@@ -71,7 +77,7 @@ class Details extends StatelessWidget {
                   Container(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "${places[0]["location"]}",
+                      "${place_details["location"]}",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 13,
@@ -87,7 +93,7 @@ class Details extends StatelessWidget {
               Container(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  "${places[0]["price"]}",
+                  "${place_details["price"]}",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 17,
@@ -113,7 +119,7 @@ class Details extends StatelessWidget {
               Container(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  "${places[0]["details"]}",
+                  "${place_details["details"]}",
                   style: TextStyle(
                     fontWeight: FontWeight.normal,
                     fontSize: 15.0,
@@ -161,5 +167,19 @@ class Details extends StatelessWidget {
         },
       ),
     );
+  }
+
+  buildBox(place){
+    return Padding(
+            padding: EdgeInsets.only(right: 10.0),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10.0),
+              child: Image.asset(
+                "${place["img"]}",
+                height: 250.0,
+                fit: BoxFit.cover,
+              ),
+            ),
+          );
   }
 }
