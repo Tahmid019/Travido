@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "409683162231",
+    "project_id": "travido-48bc0",
+    "storage_bucket": "travido-48bc0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409683162231:android:890e8825b6cbb8d066c272",
+        "android_client_info": {
+          "package_name": "com.example.travel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmT7EZj0uFJgTktXypWemL58NOIghKkDI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

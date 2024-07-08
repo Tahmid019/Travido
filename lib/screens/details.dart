@@ -7,7 +7,7 @@ import 'package:travel/widgets/iconB.dart';
 class Details extends StatelessWidget {
   final Map place_details;
 
-  const Details({Key? key, required this.place_details}) : super(key: key);
+  const Details({super.key, required this.place_details});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

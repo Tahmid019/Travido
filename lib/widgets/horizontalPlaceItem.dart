@@ -6,7 +6,7 @@ class HorizontalPlaceItem extends StatelessWidget {
   final Map place;
   final double scale;
 
-  HorizontalPlaceItem({required this.place, required this.scale});
+  const HorizontalPlaceItem({super.key, required this.place, required this.scale});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class HorizontalPlaceItem extends StatelessWidget {
         },
         child: Material(
           color: Colors.transparent,
-          child: Container(
+          child: SizedBox(
             height: 250.0 * scale,
             width: 140.0 * scale,
             child: Column(

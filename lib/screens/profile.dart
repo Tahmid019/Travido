@@ -1,8 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:travel/widgets/iconB.dart';
 
 
@@ -10,6 +8,8 @@ class Profile extends StatelessWidget {
 
   static const double coverHeight = 280;
   static const double profileHeight = 144;
+
+  const Profile({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,7 +77,7 @@ class Profile extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: Colors.black26,
             offset: Offset(0, 2), 
@@ -107,15 +107,15 @@ class Profile extends StatelessWidget {
         SizedBox(height: 10),
         Container(
           child: Column(
-            children: <Widget>[
+            children: const <Widget>[
               Row(children: [Icon(Icons.location_on, size: 15),Text("Paris, France", style: TextStyle(fontSize: 15),),],),
               
               SizedBox(width: 10),
               FittedBox(
+                fit: BoxFit.contain,
                 child: Text("I have always been captivated by the world beyond my small town's borders. With a well-worn backpack and a camera slung around my neck, I embark on journeys to far-flung destinations, seeking the stories hidden in the bustling markets of Marrakech, the serene temples of Kyoto, and the rugged landscapes of Patagonia. My journal is filled with sketches and notes, capturing the essence of each place I visit. My curiosity leads me to forge connections with locals, learning their customs and traditions, which I cherish as much as the stunning vistas I photograph. My travels are not just about the places I see but the people I meet and the cultures I immerse myself in, making every adventure a chapter in my ever-growing book of life.", 
                 overflow: TextOverflow.fade,
                 style: TextStyle(fontSize: 10),),
-                fit: BoxFit.contain,
               ),
 
               

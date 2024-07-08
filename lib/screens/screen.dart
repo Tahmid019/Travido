@@ -7,6 +7,8 @@ import 'package:travel/screens/fav.dart';
 import 'package:travel/screens/chat.dart';
 
 class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
+
   @override
   _MainScreenState createState() => _MainScreenState();
 }
@@ -19,7 +21,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView(
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         controller: _pageController,
         onPageChanged: (index) {
           setState(() {
@@ -28,15 +30,15 @@ class _MainScreenState extends State<MainScreen> {
         },
         children: List.generate(4, (index){
           if(index == 0){
-            return Home();
+            return const Home();
           }else if(index == 1){
-            return Favorite();
+            return const Favorite();
           }else if(index == 2){
-            return Chat();
+            return const Chat();
           }else if(index == 3){
-            return Profile();
+            return const Profile();
           }else{
-            return Home();
+            return const Home();
           }
         }
 
@@ -45,19 +47,19 @@ class _MainScreenState extends State<MainScreen> {
       ),
 
       bottomNavigationBar: BottomAppBar(
+        color: Theme.of(context).primaryColor,
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            SizedBox(width: 7.0),
+            const SizedBox(width: 7.0),
             barIcon(icon: Icons.home, page: 0),
             barIcon(icon: Icons.favorite, page: 1),
             barIcon(icon: Icons.mode_comment, page: 2, badge: true),
             barIcon(icon: Icons.person, page: 3),
-            SizedBox(width: 7.0),
+            const SizedBox(width: 7.0),
           ],
         ),
-        color: Theme.of(context).primaryColor,
       ),
     );
   }
@@ -80,7 +82,7 @@ class _MainScreenState extends State<MainScreen> {
 
   void onPageChanged(int page) {
     setState(() {
-      this._page = page;
+      _page = page;
     });
     
   }

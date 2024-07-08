@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 class AniS extends StatefulWidget {
+  const AniS({super.key});
+
   @override
   _AniSState createState() =>
       _AniSState();
@@ -22,7 +24,7 @@ class _AniSState extends State<AniS> {
         });
       },
       child: AnimatedContainer(
-        duration: Duration(seconds: 1),
+        duration: const Duration(seconds: 1),
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
@@ -33,7 +35,7 @@ class _AniSState extends State<AniS> {
             ],
           ),
         ),
-        child: Center(
+        child: const Center(
           child: Text(
             'Tap to Change Gradient Color',
             style: TextStyle(

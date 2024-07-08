@@ -4,11 +4,11 @@ class Constants {
   static String appName = "Flutter Travel";
 
   // Colors for theme
-  static Color lightPrimary = Color(0xfffcfcff);
+  static Color lightPrimary = const Color(0xfffcfcff);
   static Color darkPrimary = Colors.black;
   static Color lightAccent = Colors.blueGrey.shade900;
   static Color darkAccent = Colors.white;
-  static Color lightBG = Color(0xfffcfcff);
+  static Color lightBG = const Color(0xfffcfcff);
   static Color darkBG = Colors.black;
   static Color badgeColor = Colors.red;
 
@@ -40,6 +40,6 @@ class Constants {
     ), colorScheme: ColorScheme.dark(
       primary: darkPrimary,
       secondary: darkAccent,
-    ).copyWith(background: darkBG),
+    ).copyWith(surface: darkBG),
   );
 }

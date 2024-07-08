@@ -5,13 +5,15 @@ import 'package:travel/widgets/iconB.dart';
 // import 'package:travel/widgets/verticalPlaceItem.dart';
 
 class Home extends StatelessWidget {
+  const Home({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         actions: <Widget>[
           IconButton(
-            icon: IconBadge(
+            icon: const IconBadge(
               icon: Icons.notifications_none,
               size: 30,
               color: Colors.blueGrey,
@@ -22,7 +24,7 @@ class Home extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
-          Padding(
+          const Padding(
             padding: EdgeInsets.all(20.0),
             child: Text(
               "Explore",
@@ -32,7 +34,7 @@ class Home extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.all(20.0),
             child: SearchBar(),
           ),
@@ -45,7 +47,7 @@ class Home extends StatelessWidget {
 
   buildHorizontalList(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 10.0, left: 20.0),
+      padding: const EdgeInsets.only(top: 10.0, left: 20.0),
       height: 250.0,
       width: MediaQuery.of(context).size.width,
       child: ListView.builder(

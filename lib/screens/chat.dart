@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:travel/widgets/iconB.dart';
 
 class Chat extends StatelessWidget{
+  const Chat({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         actions: <Widget>[
           IconButton(
-            icon: IconBadge(
+            icon: const IconBadge(
               icon: Icons.notifications_none,
               size: 30,
               color: Colors.blueGrey,
@@ -22,7 +24,7 @@ class Chat extends StatelessWidget{
 
       body: Center(
           child: ListView(
-            children: <Widget>[
+            children: const <Widget>[
               Text("Chat"),
             ],
           ),
