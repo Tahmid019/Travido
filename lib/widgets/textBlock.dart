@@ -23,12 +23,12 @@ class TextBlock extends StatelessWidget {
                   obscureText: obscureText,
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
+                      borderSide: BorderSide(color: const Color.fromARGB(103, 255, 255, 255)),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Color.fromARGB(255, 187, 185, 185)),
                     ),
-                    fillColor: Color.fromARGB(255, 90, 89, 89),
+                    fillColor: Color.fromARGB(179, 90, 89, 89),
                     filled: true,
                     hintText: hintText,
                     hintStyle: TextStyle(color: Color.fromARGB(255, 153, 151, 151)),
