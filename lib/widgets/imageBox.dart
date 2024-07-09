@@ -4,9 +4,9 @@ class ImageBox extends StatelessWidget {
 
   final String imagePath;
   const ImageBox ({
-    super.key,
+    Key?key,
     required this.imagePath,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

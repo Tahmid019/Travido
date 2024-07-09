@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:travel/widgets/iconB.dart';
 
 class Favorite extends StatelessWidget{
-  const Favorite({super.key});
+  const Favorite({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

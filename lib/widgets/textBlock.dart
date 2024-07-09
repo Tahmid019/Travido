@@ -6,11 +6,11 @@ class TextBlock extends StatelessWidget {
   final bool obscureText;
 
   const TextBlock({
-    super.key,
+    Key?key,
     required this.controller,
     required this.hintText,
     required this.obscureText,
-  });
+  }) : super(key: key);
 
 
   @override

@@ -9,7 +9,7 @@ class Profile extends StatelessWidget {
   static const double coverHeight = 280;
   static const double profileHeight = 144;
 
-  const Profile({super.key});
+  const Profile({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Searchbar extends StatelessWidget {
   final TextEditingController _searchControl = TextEditingController();
 
-  Searchbar({super.key});
+  Searchbar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

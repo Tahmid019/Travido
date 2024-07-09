@@ -6,7 +6,7 @@ class HorizontalPlaceItem extends StatelessWidget {
   final Map place;
   final double scale;
 
-  const HorizontalPlaceItem({super.key, required this.place, required this.scale});
+  const HorizontalPlaceItem({Key?key, required this.place, required this.scale}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

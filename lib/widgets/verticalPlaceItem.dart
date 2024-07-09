@@ -5,7 +5,7 @@ import '../screens/details.dart';
 class VerticalPlaceItem extends StatelessWidget {
   final Map place;
 
-  const VerticalPlaceItem({super.key, required this.place, BorderRadius? borderRadius, Color? shadowColor, int? elevation});
+  const VerticalPlaceItem({Key?key, required this.place, BorderRadius? borderRadius, Color? shadowColor, int? elevation}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

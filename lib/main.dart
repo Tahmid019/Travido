@@ -8,17 +8,24 @@ import 'package:travel/screens/login.dart';
 // import 'package:firebase_core/firebase_core.dart';
 // import 'firebase_options.dart';
 
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+
+import 'package:travel/screens/authen.dart';
+
+
 
 void main() async {
-  // WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp(
-  //   options: DefaultFirebaseOptions.currentPlatform,
-  // );
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   _MyAppState createState() => _MyAppState();
@@ -32,7 +39,7 @@ class _MyAppState extends State<MyApp> {
       title: Constants.appName,
       theme: Constants.darkTheme,
       // home: const MainScreen(),
-      home: LoginPage(),
+      home: Authen(),
     );
   }
 }

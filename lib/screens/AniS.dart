@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 class AniS extends StatefulWidget {
-  const AniS({super.key});
+  const AniS({Key? key}) : super(key: key);
 
   @override
   _AniSState createState() =>

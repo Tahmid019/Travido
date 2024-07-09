@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:travel/screens/home.dart';
 import 'package:travel/widgets/iconB.dart';
@@ -7,7 +8,7 @@ import 'package:travel/screens/fav.dart';
 import 'package:travel/screens/chat.dart';
 
 class MainScreen extends StatefulWidget {
-  const MainScreen({super.key});
+  const MainScreen({Key? key}) : super(key: key);
 
   @override
   _MainScreenState createState() => _MainScreenState();
@@ -17,9 +18,27 @@ class _MainScreenState extends State<MainScreen> {
   late PageController _pageController;
   int _page = 0;
 
+  final user = FirebaseAuth.instance.currentUser;
+
+  void signOut() {
+
+    
+    FirebaseAuth.instance.signOut();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(user?.email ?? ''),
+
+        actions: [
+          IconButton(
+            onPressed: signOut,
+            icon:Icon(Icons.logout),
+          ),
+        ],
+      ),
       body: PageView(
         physics: const NeverScrollableScrollPhysics(),
         controller: _pageController,

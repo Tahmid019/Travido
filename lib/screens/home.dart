@@ -5,23 +5,23 @@ import 'package:travel/widgets/iconB.dart';
 // import 'package:travel/widgets/verticalPlaceItem.dart';
 
 class Home extends StatelessWidget {
-  const Home({super.key});
+  const Home({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: <Widget>[
-          IconButton(
-            icon: const IconBadge(
-              icon: Icons.notifications_none,
-              size: 30,
-              color: Colors.blueGrey,
-            ),
-            onPressed: () {},
-          ),
-        ],
-      ),
+      // appBar: AppBar(
+      //   actions: <Widget>[
+      //     IconButton(
+      //       icon: const IconBadge(
+      //         icon: Icons.notifications_none,
+      //         size: 30,
+      //         color: Colors.blueGrey,
+      //       ),
+      //       onPressed: () {},
+      //     ),
+      //   ],
+      // ),
       body: ListView(
         children: <Widget>[
           const Padding(

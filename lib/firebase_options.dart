@@ -85,4 +85,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'travido-48bc0.appspot.com',
     measurementId: 'G-HLEVLY0HBG',
   );
+
 }
