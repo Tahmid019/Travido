@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:travel/screens/home.dart';
 
 import 'package:travel/screens/home.dart';
+import 'package:travel/screens/logReg.dart';
 import 'package:travel/screens/login.dart';
 import 'package:travel/screens/screen.dart';
 
@@ -19,7 +20,7 @@ class Authen extends StatelessWidget {
             return const MainScreen();
 
           }else{
-            return LoginPage(onTap: () {  },);
+            return LogReg();
           }
         },
       ),
