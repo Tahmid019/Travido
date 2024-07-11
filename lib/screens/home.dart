@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:travel/util/places.dart';
 import 'package:travel/widgets/horizontalPlaceItem.dart';
 import 'package:travel/widgets/iconB.dart';
+import 'package:travel/widgets/verticalPlaceItem.dart';
 // import 'package:travel/widgets/verticalPlaceItem.dart';
 
 class Home extends StatelessWidget {
@@ -10,6 +11,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       // appBar: AppBar(
       //   actions: <Widget>[
       //     IconButton(
@@ -22,25 +24,40 @@ class Home extends StatelessWidget {
       //     ),
       //   ],
       // ),
-      body: ListView(
-        children: <Widget>[
-          const Padding(
-            padding: EdgeInsets.all(20.0),
-            child: Text(
-              "Explore",
-              style: TextStyle(
-                fontSize: 30.0,
-                fontWeight: FontWeight.w600,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Color.fromARGB(221, 90, 89, 89),
+        child: const Icon(Icons.map),
+      ),
+      body: Container(
+        // decoration: BoxDecoration(
+        //   image: DecorationImage(
+        //     image: AssetImage("assets/images/planets.jpeg"),
+        //     fit: BoxFit.cover,
+        //   ),
+        // ),
+        child: ListView(
+          children: <Widget>[
+            const Padding(
+              padding: EdgeInsets.all(20.0),
+              child: Text(
+                "Explore",
+                style: TextStyle(
+                  fontSize: 30.0,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ),
-          ),
-          const Padding(
-            padding: EdgeInsets.all(20.0),
-            child: SearchBar(),
-          ),
-          buildHorizontalList(context),
-          // buildVerticalList(),
-        ],
+            const Padding(
+              padding: EdgeInsets.all(20.0),
+              child: SearchBar(),
+            ),
+            buildHorizontalList(context),
+            buildVerticalList(),
+        
+          ],
+          
+        ),
       ),
     );
   }
@@ -62,19 +79,21 @@ class Home extends StatelessWidget {
     );
   }
 
-  // buildVerticalList() {
-  //   return Padding(
-  //     padding: EdgeInsets.all(20.0),
-  //     child: ListView.builder(
-  //       primary: false,
-  //       physics: NeverScrollableScrollPhysics(),
-  //       shrinkWrap: true,
-  //       itemCount: places == null ? 0 : places.length,
-  //       itemBuilder: (BuildContext context, int index) {
-  //         Map place = places[index];
-  //         return VerticalPlaceItem(place: place);
-  //       },
-  //     ),
-  //   );
-  // }
+  buildVerticalList() {
+    return Padding(
+      padding: EdgeInsets.all(20.0),
+      child: ListView.builder(
+        primary: false,
+        physics: NeverScrollableScrollPhysics(),
+        shrinkWrap: true,
+        itemCount: places == null ? 0 : places.length,
+        itemBuilder: (BuildContext context, int index) {
+          Map place = places[index];
+          return VerticalPlaceItem(place: place);
+        },
+      ),
+    );
+  }
+
+  
 }
