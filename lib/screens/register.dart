@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:travel/util/services.dart';
 import 'package:travel/widgets/imageBox.dart';
 
 import 'package:travel/widgets/button.dart';
@@ -48,7 +49,7 @@ class _RegisterState extends State<Register> {
         );
       } else {
         // Navigator.of(context).pop();
-        incorrectMail(context);
+        incorrectPassword(context);
       }
 
       Navigator.of(context).pop();
@@ -220,7 +221,9 @@ class _RegisterState extends State<Register> {
                       
                   SizedBox(height: 10),
                       
-                  ImageBox(imagePath: 'assets/images/google.png'),
+                  GestureDetector(
+                    onTap: () => AuthService().signInWithGoogle(),
+                    child: ImageBox(imagePath: 'assets/images/google.png')),
                       
                   SizedBox(height: 10),
               
