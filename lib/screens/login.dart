@@ -1,10 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:travel/util/services.dart';
 import 'package:travel/widgets/imageBox.dart';
 
@@ -17,7 +14,7 @@ class LoginPage extends StatefulWidget {
 
   final Function()? onTap;
 
-  LoginPage({Key?key, required this.onTap}):super(key: key);
+  const LoginPage({Key?key, required this.onTap}):super(key: key);
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -155,7 +152,7 @@ class _LoginPageState extends State<LoginPage> {
                     padding: const EdgeInsets.symmetric(horizontal: 20.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
+                      children: const [
                         
                         Text(
                           'Forgot Password?',
@@ -175,7 +172,7 @@ class _LoginPageState extends State<LoginPage> {
                   SizedBox(height: 40),
                       
                   Row(
-                    children: [
+                    children: const [
                       Expanded(
                         child: Divider(
                           thickness: 0.5,
@@ -183,9 +180,9 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: EdgeInsets.all(8.0),
                         child: Text('Or Continue with'
-                          , style: TextStyle(color: const Color.fromARGB(255, 228, 225, 225)),
+                          , style: TextStyle(color: Color.fromARGB(255, 228, 225, 225)),
                         ),
                       ),
                       

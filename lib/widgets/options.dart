@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class OptionScreen extends StatelessWidget {
+  const OptionScreen({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -9,27 +11,27 @@ class OptionScreen extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          SizedBox(),
+          const SizedBox(),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
                 children: [
-                  SizedBox(height: 110,),
+                  const SizedBox(height: 110,),
                   Row(
                     children: [
-                      CircleAvatar(
-                        child: Icon(Icons.person, size: 18,),
+                      const CircleAvatar(
                         radius: 18,
+                        child: Icon(Icons.person, size: 18,),
                       ),
-                      SizedBox(width: 6,),
-                      Text("Aman"),
-                      SizedBox(width: 6,),
-                      Icon(Icons.verified, size: 18,),
-                      SizedBox(width: 6,),
+                      const SizedBox(width: 6,),
+                      const Text("Aman"),
+                      const SizedBox(width: 6,),
+                      const Icon(Icons.verified, size: 18,),
+                      const SizedBox(width: 6,),
                       TextButton(
                         onPressed: () {},
-                        child: Text("Follow"
+                        child: const Text("Follow"
                           , style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
                         ),
                       ),
@@ -37,10 +39,10 @@ class OptionScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(width: 10,),
-              Text('Travel all you want'),
-              SizedBox(width: 10,),
-              Row(
+              const SizedBox(width: 10,),
+              const Text('Travel all you want'),
+              const SizedBox(width: 10,),
+              const Row(
                 children: [
                   Icon(Icons.music_note, size: 15,),
                   Text('original Audio'),
@@ -48,7 +50,7 @@ class OptionScreen extends StatelessWidget {
               ),
             ],
           ),
-          Column(
+          const Column(
             children: [
               
             ],

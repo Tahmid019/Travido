@@ -11,13 +11,13 @@ class ImageBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         border: Border.all(
           color: Colors.grey
         ),
         borderRadius: BorderRadius.circular(10),
-        color: Color.fromARGB(97, 156, 155, 155),
+        color: const Color.fromARGB(97, 156, 155, 155),
       ),
       child: Image.asset(imagePath, width: 50, height: 50, fit: BoxFit.cover),
     );

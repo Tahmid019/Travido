@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel/util/const.dart';
 
-import 'package:travel/screens/screen.dart';
-import 'package:travel/screens/login.dart';
 
 
 // import 'package:firebase_core/firebase_core.dart';
@@ -39,7 +37,7 @@ class _MyAppState extends State<MyApp> {
       title: Constants.appName,
       theme: Constants.darkTheme,
       // home: const MainScreen(),
-      home: Authen(),
+      home: const Authen(),
     );
   }
 }

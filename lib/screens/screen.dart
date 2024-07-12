@@ -35,7 +35,7 @@ class _MainScreenState extends State<MainScreen> {
         actions: [
           IconButton(
             onPressed: signOut,
-            icon:Icon(Icons.logout),
+            icon:const Icon(Icons.logout),
           ),
         ],
       ),

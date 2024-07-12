@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel/util/places.dart';
 import 'package:travel/widgets/horizontalPlaceItem.dart';
-import 'package:travel/widgets/iconB.dart';
 import 'package:travel/widgets/verticalPlaceItem.dart';
 // import 'package:travel/widgets/verticalPlaceItem.dart';
 
@@ -26,7 +25,7 @@ class Home extends StatelessWidget {
       // ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        backgroundColor: Color.fromARGB(221, 90, 89, 89),
+        backgroundColor: const Color.fromARGB(221, 90, 89, 89),
         child: const Icon(Icons.map),
       ),
       body: Container(
@@ -81,10 +80,10 @@ class Home extends StatelessWidget {
 
   buildVerticalList() {
     return Padding(
-      padding: EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(20.0),
       child: ListView.builder(
         primary: false,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
         itemCount: places == null ? 0 : places.length,
         itemBuilder: (BuildContext context, int index) {

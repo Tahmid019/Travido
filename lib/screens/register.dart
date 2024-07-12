@@ -1,10 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:travel/util/services.dart';
 import 'package:travel/widgets/imageBox.dart';
 
@@ -17,7 +14,7 @@ class Register extends StatefulWidget {
 
   final Function()? onTap;
 
-  Register({Key?key, required this.onTap}):super(key: key);
+  const Register({Key?key, required this.onTap}):super(key: key);
 
   @override
   State<Register> createState() => _RegisterState();
@@ -197,7 +194,7 @@ class _RegisterState extends State<Register> {
                   SizedBox(height: 30),
                       
                   Row(
-                    children: [
+                    children: const [
                       Expanded(
                         child: Divider(
                           thickness: 0.5,
@@ -205,9 +202,9 @@ class _RegisterState extends State<Register> {
                       ),
                       
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: EdgeInsets.all(8.0),
                         child: Text('Or Continue with'
-                          , style: TextStyle(color: const Color.fromARGB(255, 228, 225, 225)),
+                          , style: TextStyle(color: Color.fromARGB(255, 228, 225, 225)),
                         ),
                       ),
                       
